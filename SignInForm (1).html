@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body{
+background-image:url('https://cdn.hipwallpaper.com/m/20/65/S9BEqR.jpeg');
+background-size:1600px 700px;
+} 
+p{
+margin-top:0px;
+}
+table{
+margin-left:100px;
+margin-right:120px;
+margin-top:100px;
+color:red;
+background-color:yellow;
+width:83%;
+border-radius:50px;
+}
+tr,td{
+padding-left:450px;
+}
+
+#heading{
+font-family:Colonna MT;
+font-size:120px;
+color:blue;
+font-style:Italic;
+font-weight:bolder;
+}
+button{
+border-radius:28px;
+background-color:rgb(34,99,78);
+color:red;
+padding:10px 20px;
+font-size:25px;
+cursor:pointer;
+font-weight:bolder;
+font-family:Curlz MT;
+}
+.other{
+font-family:Imprint MT shadow;
+color:black;
+font-weight:bold;
+font-size:20px;
+}
+</style>
+<title>Fill information</title>
+<script>
+function myNameFunction() {
+  var x = document.getElementById("fname").value;
+ var y=/^[a-zA-Z\s]{3,15}$/;
+if(y.test(x)){
+  document.getElementById("testingName").style.color="green";
+document.getElementById("testingName").innerHTML="valid &#128512";
+return true;
+}
+else{
+  document.getElementById("testingName").style.color="red";
+document.getElementById("testingName").innerHTML="Enter 3-15 characters";
+return false;
+}
+}
+function myEmailFunction(){
+var x = document.getElementById("email").value;
+var y=/^[a-zA-z0-9\.\s\+\-]+@[a-zA-z0-9\.\s\+\-]+\.[a-zA-z\.\_\+\-]{0,3}$/;
+if(y.test(x)){
+document.getElementById("testingEmail").style.color="green";
+document.getElementById("testingEmail").innerHTML="Valid &#128516";
+return true;
+
+}
+else{
+document.getElementById("testingEmail").style.color="red";
+document.getElementById("testingEmail").innerHTML="Enter a valid email address";
+return false;
+}
+
+}
+function myPassword(){
+var x=document.getElementById("pass").value; 
+var y=/^(?=.*\d)(?=.*\w)(?=.*\W).{8,}$/;
+if(y.test(x))
+{
+document.getElementById("testingpaas").style.color="green";
+document.getElementById("testingpaas").innerHTML="Valid";
+return true;
+}
+else
+{
+document.getElementById("testingpaas").style.color="red";
+document.getElementById("testingpaas").innerHTML="Your paasword must contain one UPPERCASE letter and one lowercase letter and one digit and must of 8 characters";
+return false;
+}
+}
+function ValidatePassword(){
+var p1=document.getElementById("pass").value;
+var p2=document.getElementById("cpaas").value;
+if(p1==p2)
+{
+document.getElementById("conpaas").style.color="green";
+document.getElementById("conpaas").innerHTML="Password matched &#128578";
+return true;
+}
+else{
+document.getElementById("conpaas").style.color="red";
+document.getElementById("conpaas").innerHTML="Password didn't matched &#128528";
+return false;
+}}
+function myUsername(){
+var x=document.getElementById("username").value;
+var y=/^(?=.*\d)(?=.*\w).{6,}$/;
+if(y.test(x))
+{
+document.getElementById("testinguser").style.color="green";
+document.getElementById("testinguser").innerHTML="Username is selected";
+return true;
+}
+else{
+document.getElementById("testinguser").style.color="red";
+document.getElementById("testinguser").innerHTML="Your username must contain only letters and atleast one digit and of atleast 6 characters but doesn't contain whitespace within it";
+return false;
+}}
+function myAddress(){
+var x=document.getElementById("address").value;
+var y=/^[a-zA-Z0-9\w\W]{10,100}$/;
+if(y.test(x))
+{
+document.getElementById("testingaddress").style.color="green";
+document.getElementById("testingaddress").innerHTML="&#128077";
+return true;
+}
+else
+{
+document.getElementById("testingaddress").style.color="red";
+document.getElementById("testingaddress").innerHTML="Adress must be of atleast 10 characters";
+return false;
+}
+}
+function myPHNumber(){
+var x=document.getElementById("phnumber").value;
+var y=/^\d{3}-\d{3}-\d{4}$/;
+if(y.test(x))
+{
+document.getElementById("testingno").style.color="green";
+document.getElementById("testingno").innerHTML="It's perfect &#128512";
+return true;
+}
+else{
+document.getElementById("testingno").style.color="red";
+document.getElementById("testingno").innerHTML="Use xxx-xxx-xxxx format";
+return false;
+}
+}
+function displayalert(){
+var x=document.getElementById("fname").value;
+document.getElementById("lastalert").innerHTML=alert('Thank you to fill this form, '+ x);
+}
+</script>
+</head>
+<body>
+<form action="#">
+<table>
+<tr id="heading"><th> !!Sign in!!</th></tr>
+<tr class="other"><td>Enter your good name:<br><input id="fname" type="text"  onblur="myNameFunction()" required>
+<span id="testingName"> </span></td></tr>
+<tr class="other"><td>E-mail I'd:<br><input id="email" type="text/num" onblur="myEmailFunction()" required><span id="testingEmail"> </span></td></tr>
+<tr class="other"><td>Recovery E-mail I'd(optional):<br><input id="remail" type="text/num"></td></tr>
+
+<tr class="other"><td>Mobile number:<br><input id="phnumber" type="num" placeholder="xxx-xxx-xxxx" onblur="myPHNumber()" required><span id="testingno"> </span></td></tr>
+
+<tr class="other"><td>Date of Birth:<br><input id="dof" type="date"></td"</tr>
+
+<tr class="other"><td>
+<input type="radio" name="gender" value="Male" checked>Male<br>
+<input type="radio" name="gender" value="Female">Female<br>
+<input type="radio" name="gender" value="others">Others</td></tr>
+
+<tr class="other"><td>Create username:<br><input id="username" onblur="myUsername()" required><span id="testinguser"> </span></td></tr>
+
+<tr class="other"><td>Create Password:<br><input id="pass" type="password"  onblur="myPassword()" required><span id="testingpaas"> </span></td></tr>
+
+<tr class="other"><td>Confirm Password:<br><input id="cpaas" type="password" onchange="ValidatePassword()" required><span id="conpaas"> </span></td></tr>
+
+<tr class="other"><td ">Select your country:<br><select class="other"  id="country" style="font-size:15px;>
+<option value="sel">--select--</option>
+<option value="af">Afghanistan</option>
+<option value="al">Algeria</option>
+<option value="an">Andorra</option>
+<option value="ar">Armenia</option>
+<option value="au">Australia</option>
+<option value="ba">Bangladesh </option>
+<option value="be">Belgium </option>
+<option value="bh">Bhutan </option>
+<option value="bo">Bolivia </option>
+<option value="br">Brazil </option>
+<option value="ca">Canada</option>
+<option value="ch">China </option>
+<option value="de">Denmark </option>
+<option value="eg">Egypt </option>
+<option value="fr">France </option>
+<option value="ge">Germany </option>
+<option value="ic">Iceland </option>
+<option value="in">India </option>
+<option value="ir">Iraq </option>
+<option value="it">Italy </option>
+<option value="ja">Japan </option>
+<option value="ke">Kenya </option>
+<option value="m">Malaysia </option>
+<option value="n">Nepal </option>
+<option value="o">Oman </option>
+<option value="p">Pakistan </option>
+<option value="q">Qatar </option>
+<option value="r">Romanai </option>
+<option value="s">Spain </option>
+<option value="t">Turkey </option>
+<option value="u">Uruguay </option>
+<option value="v">Vanuatu </option>
+<option value="y">Yemen </option>
+<option value="z">Zambia </option>
+
+<tr class="other"><td>Enter your address:<br><input id="address" size="50" onblur="myAddress()" required><span id="testingaddress"> </span></td></tr>
+
+<tr class="other"><td>Select the language(s) you know:<br>
+<input type="checkbox" name="language" value="eg">English<br>
+<input type="checkbox" name="language" value="sp">Spanish<br>
+<input type="checkbox" name="language" value="fc">French<br>
+<input type="checkbox" name="language" value="gr">German<br>
+<input type="checkbox" name="language" value="jp">Japanese<br></td></tr>
+
+<tr class="other"><td><button onclick="displayalert()" <input type="submit" id="button">Sign in</button></td></tr>
+</table></form>
+<p id="lastalert"> </p>
+</body>
+</html>

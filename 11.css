@@ -1,0 +1,129 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+background-color:lightgrey;
+}
+#t1{
+text-align:center;
+width:15%;
+font-weight: bold;
+font-size: 30px;
+text-shadow: 5px 5px 5px black;
+}
+td:first-child{width:5%;
+text-align:center;}
+#home{
+	font-size:25px;
+	cursor:pointer;
+	background-color:orange;
+	color:white;
+	border-style:none;
+	font-weight:bold;
+	text-align:center;
+}
+table{
+background-color:orange;
+color:white;
+font-size:25px;
+width:100%;
+height: 100px;
+}
+#search{
+	width:400px;
+	height:40px;
+	background-color:white;
+	border-style:none;
+	border-radius:3px;
+}
+#search1{
+	height:40px;
+	background-color:blue;
+	color:orange;
+	border-style:none;
+	width:40px;
+	border-radius:3px;
+	cursor:pointer;
+	margin-left: 10px;
+}
+#t3{
+	text-align:center;
+}
+#t4{
+	text-align:center;
+}
+#t2{width:30%}
+.cart{
+	font-size:25px;
+	cursor:pointer;
+	background-color:orange;
+	color:white;
+	border-style:none;
+	font-weight:bold;
+	font-family: Georgia, serif;
+	height:50px;
+}
+.fa{margin-right:5px;}
+.cart:hover,#home:hover{border:2px double black;
+background-color: black;
+color: white;
+}
+
+a{
+	text-decoration:none;
+	color:white;
+}
+ul{
+list-style:none;
+	display:inline-flex;}
+	nav{background-color:orange;text-align:center;}
+	li{
+		margin-right:10px;padding:5px;font-weight:bold;width:150px;font-size: 16px;
+	}
+	.sub{
+		display:none;
+		
+	}
+	li:hover{border:1px solid black;
+	background-color: black;
+	}
+	li:hover .sub ul li{display:block;}
+	
+	
+	.men{width:90px;}
+	.store{
+		
+		height:400px;
+		background-color:pink;
+		overflow-x:hidden;
+		white-space:nowrap;
+		margin-top:10px;
+	}
+	.store:hover{overflow-x:scroll;}
+	.substore{
+		width:250px;
+		height:220px;
+		background-color:white;
+		border:1px solid black;
+		margin-left:10px;
+		margin-right:10px;
+		display:inline-block	;
+	    border-radius:50% ;
+		text-align:center;
+		vertical-align:middle;
+		padding-top:50px;
+		
+	}
+	h1{margin-left:10px;}
+	.brand{font-size:20px;}
+	#signin{font-weight:bold;
+		text-align:center;}
+#logout{
+font-weight:bold;
+text-align:center;}
+#hell{
+	font-size:20px;
+	width:80%;
+	
+}

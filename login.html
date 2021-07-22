@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body{
+background-image:url('formwallpaper.jpeg');
+background-size:1600px 700px;
+} 
+table{
+margin-left:400px;
+margin-top:150px;
+color:red;
+background-color:yellow;
+width:50%;
+border-radius:50px;
+}
+tr,td{
+padding-left:300px;
+}
+
+#heading{
+font-family:Colonna MT;
+font-size:120px;
+color:blue;
+font-style:Italic;
+font-weight:bolder;
+}
+button{
+border-radius:28px;
+background-color:rgb(34,99,78);
+color:red;
+padding:10px 20px;
+font-size:25px;
+cursor:pointer;
+font-weight:bolder;
+font-family:Curlz MT;
+}
+.other{
+font-family:Imprint MT shadow;
+color:black;
+font-weight:bold;
+font-size:20px;
+}
+</style>
+<script src='1.js'></script>
+<title>Fill information</title>
+</head>
+<body onload='remember();'>
+<table>
+<tr id="heading"><th> !!Sign in!!</th></tr>
+<tr class="other"><td>Mobile number:<br><input id="mobile" type="num" placeholder="xxx-xxx-xxxx" ></td></tr>
+<tr class="other"><td>Enter Password:<br><input id="pwd" type="password" ></td></tr>
+<tr class="other"><td><button id='button' onclick='LOGIN();'>Login</button></td></tr>
+<tr class="other"><td>don't have account?<a href ='SignInForm.html'>Create one</a></td></tr>
+</body></html>

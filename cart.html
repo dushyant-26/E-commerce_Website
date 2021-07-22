@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>Online shopping Website--->SHOPFAST.in</title>
+<link rel = "icon" href = 
+ "pageicon.png" type = "image/x-icon">
+ <link rel="stylesheet" href="fontawesome-free-5.14.0-web/fontawesome-free-5.14.0-web/css/all.css">
+  <link rel="stylesheet" href="1.css" >
+<script src='1.js'></script>
+
+</head>
+<body onload='b();addtocart();'>
+<table id='table' >
+<tr>
+<td ><button id='home' onclick='window.open("mainpage.html","_self")'><i class="fa fa-home" ></i></button></td>
+<td id='t1'>SHOPFAST.IN<br><i class="fa fa-shopping-bag"></i></td>
+<script>
+setInterval(head,500);
+</script>
+<td id='t2'><input type='search' placeholder='Search For Products,Brands and more' id='search'><button id='search1'><i class="fa fa-search"></i></button></td>
+<td id='t3'><button class='cart' onclick='sign();'>Sign In</button></td>
+<td id='t4'><button class='cart'><i class="fa fa-shopping-cart"></i> CART</button></td>
+<td id='signin'><i class="fa fa-user-circle"></i></td>
+<td id='logout'><button class='cart' onclick='logout();'>LogOut</button></i></td>
+</tr>
+</table>
+<nav>
+<ul>
+<li class='men'><a href='#mob'>Mobiles</a>
+</li>
+<li class='men'><a href='#Laptop'>Laptops</a></li>
+<li ><a href='#men'>Men's Fashion</a></li>
+<li ><a href='#women'>Women's Fashion</a></li>
+<li><a href='#W.P'>Water Purifiers</a></li>
+<li ><a href='#'>Home & Furniture</a></li>
+<li><a href='#'>Sports,Books & more</a></li>
+</ul>
+</nav>
+<div style='width:100%;background-color:white;height:600px;' id='box'>
+<h1 style='text-align:center'>Your Cart</h1>
+<table id='cartadd'>
+<ul>
+<tr id="caH" >
+<td></td>
+<th>Item Name</th>
+<th>Quantity</th>
+<th>Price</th>
+<th>Total price</th>
+<td></td>
+</tr>
+<tr id="ca1" >
+<td><li style='width:10px;'></li></td>
+<th>Samsung Galaxy M31</th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='m31q' onchange='total1();'min='0'max='5'></th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='m31p'value='17499' readonly></th>
+<th ><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center'id='to1' readonly></th>
+<td><button class='trash'style='background-color:cyan;border-style:none;cursor:pointer;' onclick="localStorage.setItem('cart1',0);window.open('cart.html','_self');"><i class="fa fa-trash" ></button></i></td>
+</tr>
+<tr id="ca2" >
+<td><li style='width:10px;'></li></td>
+<th>OnePlus 7T</th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='7tq' onchange='total1();'min='0'max='5'></th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center'id='7tp' value='37999' readonly></th>
+<th ><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='to2' readonly></th>
+<td><button class='trash'style='background-color:cyan;border-style:none;cursor:pointer;' onclick="localStorage.setItem('cart2',0);window.open('cart.html','_self');"><i class="fa fa-trash" ></button></i></td>
+</tr>
+<tr id="ca3" >
+<td><li style='width:10px;'></li></td>
+<th>OnePlus Nord 5G</th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='nordq' onchange='total1();'min='0' max='5'></th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='nordp'value='29999' readonly></th>
+<th ><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='to3' readonly></th>
+<td><button class='trash'style='background-color:cyan;border-style:none;cursor:pointer;' onclick="localStorage.setItem('cart3',0);window.open('cart.html','_self');"><i class="fa fa-trash" ></button></i></td>
+</tr>
+<tr id="ca4" >
+<td><li style='width:10px;'></li></td>
+<th>Redmi Note 8 Pro</th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='8q' onchange='total1();'min='0' max='5'></th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='8p' value='18999' readonly></th>
+<th ><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='to4' readonly></th>
+<td><button class='trash'style='background-color:cyan;border-style:none;cursor:pointer;' onclick="localStorage.setItem('cart4',0);window.open('cart.html','_self');"><i class="fa fa-trash" ></button></i></td>
+</tr>
+<tr id="ca5" >
+<td><li style='width:10px;'></li></td>
+<th>Redmi Note 9 Pro Max</th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='9q' onchange='total1();'min='0' max='5'></th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='9p'value='16999' readonly></th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='to5' readonly></th>
+<td><button class='trash'style='background-color:cyan;border-style:none;cursor:pointer;' onclick="localStorage.setItem('cart5',0);window.open('cart.html','_self');"><i class="fa fa-trash" ></button></i></td>
+</tr>
+<tr id="ca6" >
+<td><li style='width:10px;'></li></td>
+<th>Samsung A51</th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='aq' onchange='total1();'min='0'max='5' ></th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='ap' value='23999' readonly></th>
+<th ><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='to6' readonly></th>
+<td><button class='trash'style='background-color:cyan;border-style:none;cursor:pointer;' onclick="localStorage.setItem('cart6',0);window.open('cart.html','_self');"><i class="fa fa-trash" ></button></i></td>
+</tr>
+<tr id="ca7" >
+<td><li style='width:10px;'></li></td>
+<th>Samsung S10</th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='sq' onchange='total1();'min='0'max='5'></th>
+<th><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='sp' value='44999' readonly></th>
+<th ><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center' id='to7' readonly></th>
+<td><button class='trash'style='background-color:cyan;border-style:none;cursor:pointer;' onclick="localStorage.setItem('cart7',0);window.open('cart.html','_self');"><i class="fa fa-trash" ></button></i></td>
+</tr>
+<tr id="tot" >
+<td colspan='4' style='text-align:right;font-weight:bold;'>Total Bill:</td>
+
+<th ><input type='number' style='height:25px;margin:0px;padding:0px;text-align:center;' id='tott' readonly ></th>
+</tr>
+<tr>
+<td colspan='5'id='Dushyant' style='text-align:center;font-weight:bold;font-size:30px;'></td>
+</tr>
+<tr>
+<td colspan='5' style='text-align:center'><button  onclick='buy1();'id='but'>Buy Now</button></td>
+</tr>
+</table>
+<script>
+setInterval(but,1000);
+</script>
+</div>
+<div id='box1' style='display:none;width:100%;background-color:white;height:600px;font-size:30px'>
+<h1 style='text-align:center'>Order details</h1><form onsubmit='add1();return false;'>
+<table id='od' style='margin:0 auto;'>
+<tr>
+<td style='width:50%' >House No.</td><td><input type='text' id='house'></td>
+</tr>
+<tr>
+<td>Colony</td><td><input type='text' id='colony'></td>
+</tr>
+<tr>
+<td>City</td><td><input type='text' id='city'></td>
+</tr>
+<tr>
+<td>State</td><td><input type='text' id='state'></td>
+</tr>
+<tr>
+<td>Total Cost:</td><td><p id='total1'>&#8377;</p></td>
+</tr>
+<tr>
+<td>Payment</td><td><input type='radio' name='payment' id='COD' >COD<br><input type='radio' id='CARD'name='payment'>Debit Card<br></td>
+</tr>
+<tr>
+<td colspan='2'><button type='submit' style='width:90%;'>Order Now</button></td>
+</tr>
+</table>
+</form></div><br><br>
+<div id='box2' style='display:none;width:100%;background-color:white;height:600px;font-size:30px;'>
+<h1 style='text-align:center'>Debit Card Details</h1><form onsubmit='card1();return false;'>
+<table id='od' style='margin:0 auto;'>
+<tr>
+<td style='width:40%'>Card No.</td><td><input type='text' placeholder='xxxx-xxxx-xxxx-xxxx'></td>
+</tr>
+<tr>
+<td>CVV No.</td><td><input type='number'></td>
+</tr>
+<tr>
+<td>Expiry Date</td><td><input type='text' placeholder="mm/yy"></td>
+</tr>
+<tr>
+<td colspan='2'><button type='submit' style='width:90%;'>Submit Details</button></td>
+</tr>
+</table>
+</form></div>
+<div id='box3' style='display:none;width:100%;background-color:white;height:600px;font-size:30px'>
+<h2 style='text-align:center;'>Processing Your Order..........</h2><br><br>
+<div style='width:200px;height:20px;border:1px solid black;margin-left:250px;margin:0 auto;'>
+<div style='height:20px;background-color:green;width:0px;' id='charu1'>
+</div>
+</div>
+<br><br>
+</div>
+<div id='box3' style='width:100%;background-color:white;height:600px;font-size:30px'>
+<p id='summary1' style='margin-left:500px'></p>
+</div>
+
